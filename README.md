@@ -7,6 +7,8 @@ This Project is part of the Web development Course The Odin Project.
 
 The goal of this project is to **practice JavaScript from scratch**, including functions, variables, random values, user input, and game logic.  
 
+[View live version](https://demdan01.github.io/Odin-Rock-Paper-Scissors/)
+
 ---
 
 ## Features
