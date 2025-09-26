@@ -1,4 +1,7 @@
 
+let humanScore      = 0;
+let computerScore   = 0;
+
 function getRandomIntBetween(min,max) {
     return Math.round(Math.random() * (max - min) + min);
 }
@@ -32,4 +35,26 @@ function getHumanChoice() {
     }
 }
 
+function playRound(humanChoice, computerChoice) {
+    if (humanChoice === computerChoice) {
+        console.log("Draw! Nobody won!");
+    } else if (
+        (humanChoice === "ROCK" && computerChoice === "SCISSORS") ||
+        (humanChoice === "SCISSORS" && computerChoice === "PAPER") ||
+        (humanChoice === "PAPER" && computerChoice === "ROCK")
+    ) {
+        console.log(`${humanChoice} beats ${computerChoice}! You won!`);
+        humanScore++;
+    } else {
+        console.log(`${computerChoice} beats ${humanChoice}! You lost!`);
+        computerScore++;
+    }
 
+    console.log(`Current Score:
+    Player: ${humanScore} Computer: ${computerScore}`);
+    }
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
