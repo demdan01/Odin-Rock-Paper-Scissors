@@ -16,3 +16,20 @@ function getComputerChoice() {
     }
 }
 
+function getHumanChoice() {
+    let choice = prompt("Rock,Paper or Scissors?");
+    const choice_toUpperCase = choice.toUpperCase();
+
+    switch(choice_toUpperCase) {
+  case "ROCK":
+    return "ROCK";
+  case "PAPER":
+    return "PAPER";
+  case "SCISSORS":
+    return "SCISSORS";
+  default:
+    return getHumanChoice();
+    }
+}
+
+
